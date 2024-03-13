@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+  background: hsl(30, 38%, 92%);
+}
+h1{
+  font-family: "Fraunces", serif;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 20px; /* Espacement pour la lisibilité */
+}
+
+.container {
+  max-width: 550px; /* Ajustement de la largeur du conteneur */
+  margin: 160px auto; /* Centrage horizontal */
+  height: 11.5cm;
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Ombre pour effet de profondeur */
+}
+
+.img {
+  flex: 1;
+  width:275px;
+  border-radius: 10px 0 0 10px;
+  overflow: hidden; /* Pour que l'image ne dépasse pas du cadre */
+}
+
+img {
+  width: 100%; /* Ajustement de la largeur de l'image */
+  height: 11.5cm; /* Hauteur automatique pour garder les proportions */
+}
+
+.text {
+  flex: 1;
+  border-radius: 0 10px 10px 0;
+  padding: 23px; /* Espacement du contenu */
+}
+.first{
+  font-family: "Montserrat", sans-serif;
+  color: lightslategray;
+}
+h4 {
+  margin-top: 0;
+  font-family: "Montserrat", sans-serif;
+  color: lightslategray;
+ /* Suppression de la marge supérieure par défaut */
+}
+
+/* Pour les petits écrans, ajustement de la disposition en colonne */
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    margin:130px 600px 130px 600px;
+  }
+
+  .img {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .text {
+    border-radius: 0 0 10px 10px;
+    font-family: 'Montserrat', sans-serif; /* Ajout d'une police par défaut */
+  }
+}
+.second{
+  display: flex;
+  align-items: center;
+  font-family: "Fraunces", serif;
+}
+.crossed{
+  text-decoration:line-through;
+  color: lightslategray;
+  margin-left: 10px;
+}
+.green{
+  color:#3a9679;
+}
+button{
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  color:white;
+  background: #3a9679;
+  border-radius: 6px;
+  width: 235PX;
+  height:1cm;
+}
+
+
+  </style>
+</head>
+<body>
+ <div class="container"> 
+
+    <div class="img">  <img src="images/image-product-desktop.jpg" alt="Perfume Signed CHANEL"></div>
+    <div class="text">
+        <h4>Perfume</h4>
+
+    <h1>Gabrielle Essence Eau De Parfum</h1>
+    
+    <p class="first">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+    Perfumer-Creator for the House of CHANEL.</p>
+    <div class="second"> 
+      <h1 class="green">$149.99</h1>
+      <p class="crossed">$169.99<p>
+    </div>
+      <button>
+        <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z" fill="#FFF"/></svg>
+       <b>Add to Cart</b>
+      </button>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Saleem1pro">Saleem</a>.
+  </div>
+</body>
+</html>
